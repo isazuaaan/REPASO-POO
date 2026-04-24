@@ -1,0 +1,14 @@
+package proy511;
+public class Envio {
+ private String direccion;
+ private Notificacion notificacion;
+ public Envio(String direccion, Notificacion notificacion){
+     this.direccion=direccion;
+     this.notificacion=notificacion;
+ }
+ public void realizarEnvio (){
+     System.out.println("Producto Enviado");
+     notificacion.realizarNotificacion();
+ }
+ 
+}
