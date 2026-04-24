@@ -1,0 +1,14 @@
+// En el SOURCE LUEGO DE CAMBIAR EL NOMBRE DE CADA PARTE DEL RECUADRO (CHANGE VARIABLE NAME)
+//SE DEBE IR AL SOURCE Y EN EL BTN PAGO INSERTAR ESTO
+// EN EL PRINCIPAL NO SE HACE NADA, SOLO CREAR UN JAVA CLASS
+
+ private void btnMostrarPagoActionPerformed(java.awt.event.ActionEvent evt) {                                               
+      int ed = Integer.parseInt(txtEdad.getText());
+      String esp = cbxEspecialidad.getSelectedItem().toString();
+      
+      Consulta con = new Consulta(ed, esp);
+      
+      txtResumen.setText("Costo de consulta:" +con.getCostoConsulta() );
+      
+              
+    }                                              
