@@ -1,0 +1,16 @@
+package proy511;
+public class Proy511 {
+
+    
+    public static void main(String[] args) {
+        // MODELAR E IMPLEMENTAR LAS SIGUIENTES RELACIONES DE DEPENDENCIA:
+        //-SERVICIO DE ENVIO Y SERVICIO DE NOTIFICACION
+        //-SERVICIO DE AUTENTICACION - SERVICIO DE REGISTRO
+        
+        Notificacion n1 = new Notificacion("Producto enviado...");
+        Envio e1 = new Envio("Jr. Ucayali 4050", n1);
+        e1.realizarEnvio();
+              
+    }
+    
+}
