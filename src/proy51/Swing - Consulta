@@ -1,0 +1,53 @@
+package proy32;
+public class Consulta {
+    private int edad;
+    private String especialidad;
+    private double costoConsulta;
+    public Consulta (){    
+    }
+    public Consulta (int edad,String especialidad){
+        this.edad=edad;
+        this.especialidad=especialidad;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    public double getCostoConsulta() {
+        CalcularConsulta();
+        return costoConsulta;
+    }
+
+    public void setCostoConsulta(double costoConsulta) {
+        this.costoConsulta = costoConsulta;
+    }
+    
+    public void CalcularConsulta(){
+        double costoInicial= 0;
+        double costoAdicional= 0;
+        if (edad>=0 && edad<=17) {
+            costoInicial=80;
+        } else {
+            costoInicial=100;
+        }
+        if (especialidad.equalsIgnoreCase("DERMATOLOGIA"))
+            costoAdicional = 0.02 * costoInicial;
+        if (especialidad.equalsIgnoreCase("NEUMOLOGIA"))
+            costoAdicional = 0.04 * costoInicial;
+        
+        costoConsulta = costoInicial + costoAdicional;     
+        }
+    }
