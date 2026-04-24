@@ -1,0 +1,12 @@
+package proy511;
+public class Notificacion {
+    private String mensaje;
+    public Notificacion(String mensaje){
+        this.mensaje=mensaje;
+    }
+    public void realizarNotificacion(){
+        System.out.println("Estado:"+mensaje);
+        
+    }    
+       
+    }
